@@ -307,7 +307,7 @@ namespace SenseNet.Security
 
             if (userId == ownerId)
                 collection.Add(Configuration.Identities.OwnerGroupId);
-
+            collection.Add(Configuration.Identities.VisitorUserId);
             var extension = _securityContext.GetDynamicGroups(entityId);
             if(extension==null)
                 return;
